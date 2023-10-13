@@ -10,7 +10,7 @@ const navbar = () => {
                 src="/logo-footer-ruang-karya.png"
                 height={32}
                 width={85} 
-                class="h-8 mr-3" alt="ruang karya"/>
+                className="h-8 mr-3" alt="ruang karya"/>
         </a>
 
         <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center 
