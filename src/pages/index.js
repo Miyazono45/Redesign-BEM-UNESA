@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar/>
       <div>
         <div className=" bg-cover bg-no-repeat h-screen w-full bg-[url('../../public/main-hero.png')]
-        pt-[25%] md:pt-[20%] lg:pt-[17.5%] xl:pt-[10%] ">
+        pt-[25%] md:pt-[20%] lg:pt-[17.5%] xl:pt-[10%] bg-center">
           <div className="flex items-center justify-center content-center flex-col">
             <h4 className=' text-3xl font-light  font-[raleway] '>
               Selamat Datang di official website
