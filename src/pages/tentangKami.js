@@ -49,7 +49,7 @@ export default function Home() {
             </div>
 
             {/* Button More */}
-            <div className={`${isHoverBM ? 'bg-transparent box-border border-2 border-[#4B6AFA]' : 'border-2 box-border bg-[#4B6AFA]'} border-2 mt-[20%] px-4 py-2 transition-all duration-150 box-border rounded-full md:mt-[10%]`}
+            <div className={`${isHoverBM ? 'bg-transparent box-border border-2 border-[#4B6AFA]' : 'border-2 box-border bg-[#4B6AFA]'} border-2  mt-[20%] px-4 py-2 transition-all duration-150 box-border rounded-full md:mt-[10%]`}
               onMouseEnter={() => bmHovered(true)}
               onMouseLeave={() => bmHovered(false)}
             >
