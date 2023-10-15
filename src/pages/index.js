@@ -1,5 +1,6 @@
 
 import Navbar from './components/Navbar.js'
+import NewsSlide from './control/news.js'
 
 import { Inter } from 'next/font/google'
 import { Raleway } from 'next/font/google'
@@ -28,6 +29,8 @@ export default function Home() {
             </h2>
           </div>
         </div>
+      </div>
+      <div>
       </div>
     </main>
   )
