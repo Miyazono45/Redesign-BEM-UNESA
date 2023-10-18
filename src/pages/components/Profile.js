@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar.js";
 
 import { Raleway } from 'next/font/google'
 
@@ -79,8 +78,7 @@ export default function profile() {
                 </div>
             </div>
 
-            {/* overlay */}
-            <div className={`${isClicked ? 'flex' : 'hidden'} fixed z-10 items-center justify-center w-screen h-screen bg-black opacity-70 top-0`}></div>
+
 
             {/* Container Hero */}
             <div className="flex flex-col justify-center items-center px-[10%] pt-[20%] md:pt-[15%] xl:pt-[7.5%]">
@@ -94,12 +92,17 @@ export default function profile() {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {dataRes.map((items, index) => {
-                        return <button key={index} className={`${isHovered ? 'bg-transparent border-yellow-400' : 'bg-yellow-400'} border-2 border-yellow-400 flex items-center justify-center rounded-full w-[85%] h-[.75em] p-6 box-border transition-all duration-200 md:drop-shadow-md xl:w-[100%]`}
-                            onClick={() => { setIsClicked(true); setNum(index) }}>
-                            <h1 className={`${isHovered ? 'text-yellow-400' : 'text-[#1F183C]'} font-bold text-md box-border transition-all duration-200 md:text-lg`}>{items.judul}</h1>
-                        </button>
-                    }
-                    )}
+                        return (
+                            < div className="w-screen bg-[#1F183C] px-[10%] fixed z-10">
+                                <div className="">
+                                    <h1>{dataRes[index].judul}</h1>,
+                                    <p>{dataRes[index].deskripsi}</p>
+                                    <Image src={`/${dataRes[index].gambar1}`} width={250} height={250} alt="Gambar tidak tersedia" />
+                                    {console.log(dataRes[index].judul)}
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </main >
