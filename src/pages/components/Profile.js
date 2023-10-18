@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Navbar from '../components/Navbar'
 
 import { Raleway } from 'next/font/google'
 const raleway = Raleway({ subsets: ['cyrillic-ext'] })
@@ -31,6 +32,13 @@ export default function profile() {
         )
     }
 
+    // <div className="">
+    //     <h1>{dataRes[indexes].judul}</h1>,
+    //     <p>{dataRes[indexes].deskripsi}</p>
+    //     <Image src={`/${dataRes[indexes].gambar1}`} width={250} height={250} alt="Gambar tidak tersedia" />
+    //     {console.log(dataRes[indexes].judul)}
+    // </div>
+
     return (
         <main className={raleway.className}>
             {/* Container Hero */}
@@ -43,12 +51,12 @@ export default function profile() {
                 <div className="flex flex-col justify-center items-center gap-5 mt-8">
                     {dataRes.map((items, index) => {
                         return (
-                            < div className="w-screen bg-[#1F183C] px-[10%] fixed z-10">
+                            < div key={index} className="w-screen bg-[#1F183C] px-[10%] fixed z-10">
                                 <div className="">
-                                    <h1>{dataRes[index].judul}</h1>,
-                                    <p>{dataRes[index].deskripsi}</p>
-                                    <Image src={`/${dataRes[index].gambar1}`} width={250} height={250} alt="Gambar tidak tersedia" />
-                                    {console.log(dataRes[index].judul)}
+                                    <h1>{items.judul}</h1>,
+                                    <p>{items.deskripsi}</p>
+                                    <Image src={`/${items.gambar1}`} width={250} height={250} alt="Gambar tidak tersedia" />
+                                    {console.log(items.judul)}
                                 </div>
                             </div>
                         )

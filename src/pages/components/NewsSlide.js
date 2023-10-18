@@ -4,51 +4,95 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+// import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+// import Slider from 'react-slick';
 
 // const  topics  = await getTopic();
 export default function slide({news}){
     //  t._id ${encodeURIComponent(t.slug)} // text-3xl md:text-5xl p-6 h-50 w-50  md:p-10 md:w-60 md:h-60
+    const [progressWidth, setProgressWidth] = useState(20);
+
+      const settings = {
+        className: "center flex flex-row",
+        infinite: false,
+        slidesToShow: 2,
+        swipeToSlide: true,
+        nextArrow: <NextIcon />,
+        prevArrow: <PrevIcon />,
+        afterChange: (index) => {
+          setProgressWidth((100 / 5) * (index + 1));
+        },
+      };
     return(
         // as={'/berita/${t._id}'}
-        <div className="flex felx-row justify-center items-center">
-            {news?.map(t=> (
-            <Link key={t._id} href={'/Berita/getBerita/'+t._id} 
-            className="
-            flex
-            justify-center
-            items-center
-            bg-orange-200
-            drop-shadow-md
-            rounded-md
-            p-3
-            flex-col
-            mx-4
-            w-28
-    ">
-                <div className="flex flex-col justify-center items-center
+        <>
+            <div className="flex flex-col justify-center items-center h-screen">
+                <h1 className="
+                    text-4xl
+                    font-[Raleway]
+                    font-semibold
+                    mb-10
                 ">
-                    <Image
-                        src="/image1.png"
-                        height={112}
-                        width={85} 
-                        className="" alt="logo Berita"
-                      />
-                    <div >
-                        <h2 className="
-                           w-50
-                           font-semibold 
-                        "
-                        >{t.title}</h2>
-                        {/* <p>{t.description}</p> */}
-                    </div>
-                </div>
-            </Link>
+                    Berita Terbaru
+                </h1>
+                <slider {...settings}>
+                {news?.map(t=> (
+                            <Link key={t._id} href={'/Berita/getBerita/'+t._id} 
+                            className="
+                            flex
+                            justify-center
+                            items-center
+                            bg-orange-200
+                            drop-shadow-md
+                            rounded-md
+                            flex-col
+                            mx-4
+                            w-[274.5px]
+                            h-[176px]
+                    ">
+                                <Image
+                                    src="/image1.png"
+                                    height={156}
+                                    width={274.5}
+                                    className="" 
+                                     alt="Gambar Berita"
+                                  />
+                                    <div >
+                                        <h2 className="
+                                           font-semibold
+
+                                        "
+                                        >{t.title}</h2>
+                                        {/* <p>{t.description}</p> */}
+                                    </div>
+                            </Link>
                 
-               ))}
-        </div>
+                               ))}
+                </slider>
+                    
+                </div>
+        </>
+        
        
     )
 }
+
+const PrevIcon = ({ onClick }) => {
+    return (
+      <div className="slick-icons slick-icons--left ">
+        <RiArrowLeftSLine className="slick-icons--left" onClick={onClick} />
+      </div>
+    );
+  };
+  
+  const NextIcon = ({ onClick }) => {
+    return (
+      <div className="slick-icons slick-icons--right">
+        <RiArrowRightSLine className="slick-icons--right" onClick={onClick} />
+      </div>
+    );
+  };
 
 // export const getServerSideProps = async()=>{
 //     try{

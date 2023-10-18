@@ -72,13 +72,13 @@ const navbar = () => {
             <div className='box-border hidden md:inline-block lg:mr-16 xl:mr-24'>
                 <ul className='flex flex-row gap-6 box-border xl:gap-9'>
                     <li>
-                        <Link href={'#'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll < sizeWindow / 2 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Beranda</Link>
+                        <Link href={'/'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll < sizeWindow / 2 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Beranda</Link>
                     </li>
                     <li>
                         <Link href={'#tentangKami'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll >= sizeWindow / 2 && currentScroll <= sizeWindow * 1.5 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Tentang Kami</Link>
                     </li>
                     <li>
-                        <Link href={'#'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll >= sizeWindow * 1.5 && currentScroll < sizeWindow * 2.5 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Berita</Link>
+                        <Link href={'/Berita'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll >= sizeWindow * 1.5 && currentScroll < sizeWindow * 2.5 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Berita</Link>
                     </li>
                 </ul>
             </div>
