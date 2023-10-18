@@ -12,7 +12,7 @@ const tentangkami = () => {
   }
 
   return (
-    <main>
+    <main id="tentangKami">
       <div className='w-screen h-screen px-[25px] pt-[30%] md:pt-[20%] md:px-[10%] lg:px-[5%] lg:pt-0 lg:flex lg:items-center xl:px-[7.5%]'>
 
         {/* Containter */}
@@ -20,14 +20,14 @@ const tentangkami = () => {
 
           {/* Hero Image */}
           <div className='w-[100%] h-full flex items-center lg:self-center lg:grow lg:basis-2/5'>
-            <Image src={'/mainUnesa.webp'} width={500} height={500} alt='Gambar Unesa' className='object-cover rounded-[6px] w-[100%] box-border md:rounded-3xl md:drop-shadow-md lg:rounded-xl lg:drop-shadow-lg lg:w-[100%] lg:h-[25em]' />
+            <Image src={'/mainUnesa.webp'} width={1000} height={1000} alt='Gambar Unesa' className='object-cover relative rounded-[6px] w-[100%] box-border md:rounded-3xl md:drop-shadow-md lg:rounded-xl lg:drop-shadow-lg lg:w-[100%] lg:h-[25em] xl:h-[40em]' />
           </div>
 
           {/* Container T.Kami */}
-          <div className='flex flex-col items-center pt-10 lg:self-center lg:grow lg:basis-3/5 lg:pl-[2.5%] lg:pt-0'>
+          <div className='flex flex-col items-center pt-10 lg:self-center lg:grow lg:basis-3/5 lg:pl-[2.5%] lg:pt-0 xl:items-left xl:self-start'>
             {/* Tentang Kami */}
             <div className=''>
-              <h1 className='font-bold text-[1.5em] text-[#1E1E1E] md:text-[2.25em] lg:text-[2.75em] lg:font-extrabold xl:text-[3.1em]'>Tentang <span className='text-yellow-400'>Kami</span></h1>
+              <h1 className='font-bold text-[1.5em] text-[#1E1E1E] md:text-[2.25em] lg:text-[2.75em] lg:font-extrabold xl:text-[4em]'>Tentang <span className='text-yellow-400'>Kami</span></h1>
             </div>
 
             {/* Hero Text */}
