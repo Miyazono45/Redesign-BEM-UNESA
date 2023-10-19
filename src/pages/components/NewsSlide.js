@@ -45,8 +45,8 @@ export default function slide({news}){
                 Berita <span className="text-yellow-400"
                 >Terbaru</span>
               </h1>
-            <div className="flex flex-col justify-center items-center p-8">
-            <Carousel showThumbs={false} {...settings} className="flex flex-row justify-center items-center w-[272px]  md:w-[524px] lg:w-[728px] xl:w-[932px] " autoPlay infiniteLoop dynamicHeight={false} >
+            <div className="flex flex-col justify-center items-center">
+            <Carousel showThumbs={false} {...settings} className="flex flex-row justify-center items-center w-[290px]  md:w-[524px] lg:w-[728px] xl:w-[932px] " autoPlay infiniteLoop dynamicHeight={false} >
                 {news?.map(t=>(
                   <Link key={t._id} interval={4000} className="" href={'/Berita/getBerita/'+t._id}>
                     <div >
@@ -58,7 +58,7 @@ export default function slide({news}){
                         alt="gambar berita"
                         />
                         
-                          <h3 className="">
+                          <h3 className="font-semibold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
                             {t.title}
                           </h3>
                     </div>       

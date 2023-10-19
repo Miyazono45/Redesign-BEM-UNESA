@@ -5,6 +5,7 @@ export default async function handler(req, res) {
         host: 'localhost',
         port: '3306',
         user: 'root',
+        // password: 'Lolnation6768',
         database: 'profile_bem'
     });
 
