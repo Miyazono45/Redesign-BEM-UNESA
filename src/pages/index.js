@@ -6,6 +6,7 @@ import News from '../../models/News.js';
 import NewsSlide from '../pages/components/NewsSlide.js'
 import Profile from "./components/Profile.js";
 
+
 import { Raleway } from 'next/font/google'
 
 const raleway = Raleway({ subsets: ['cyrillic-ext'] })

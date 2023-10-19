@@ -40,7 +40,7 @@ export default function slide({news}){
     return(
        
         <div className={`${raleway.className}`}>
-          <div className="flex flex-col justify-center items-center h-screen w-screen">
+          <div className="flex flex-col justify-center items-center h-screen w-screen md:mt-7 sm:mt-5">
               <h1 className='font-bold text-[1.5em] text-[#1E1E1E] md:text-[2.25em] lg:text-[2.75em] lg:font-extrabold xl:text-[4em]'>
                 Berita <span className="text-yellow-400"
                 >Terbaru</span>
@@ -54,7 +54,7 @@ export default function slide({news}){
                         src={`/${t.image}`}
                         width={675}
                         height={485}
-                        className="h-auto w-auto"
+                        className="h-auto w-auto rounded-sm"
                         alt="gambar berita"
                         />
                         

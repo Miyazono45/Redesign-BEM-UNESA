@@ -2,31 +2,52 @@ import Link from "next/link";
 import connect from "../../../backend/index";
 import Newsdb from "../../../models/News";
 import Navbar from '../components/Navbar';
+import Image from "next/image";
+import bgSec from "../../../public/secondary-hero.png"
+
+import { Raleway } from 'next/font/google'
+const raleway = Raleway({ subsets: ['cyrillic-ext'] })
 // import beritanew from "../../pages/components/NewsSlide"
 
 export default function Berita({Tests}){
     console.log(Tests);
-    return (
-        <>
+    return (    
+        <main className={`${raleway.className}`}>
             <Navbar/>
-            <h1>
-               Halo 
-            </h1>
-            <div className="pt-[25%]">
-            {Tests?.map(t =>(
+            <div className="pt-[12.5%] flex-col flex justify-center items-center">
+                <div className="bg-cover bg-no-repeat pb-[5%]">
+                    <h1 className="text-7xl font-bold ">
+                       Berita 
+                    </h1>
+                </div>
+                
+                <div className="flex flex-col m-auto justify-center items-center flex-grow md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
+                {Tests?.map(t =>(
             
-                    <Link key={t._id} href={'/Berita/getBerita/'+t._id} className="">
-                        <div className="">
-                            <h1>
-                                {t.title}
-                            </h1>
-                        </div>
-                    </Link>
+                        <Link key={t._id} href={'/Berita/getBerita/'+t._id} className="m-2 flex flex-col justify-center items-center bg-yellow-400 w-72 h-44 lg:w-80 lg:h-56 rounded-xl">
+                            <Image
+                                src={'/'+t.image}
+                                height={150}
+                                width={250}
+                                alt={t.title} 
+                                className="rounded-xl lg:h-44 lg:w-72"   
+                            />
+                            <div className="">
+                                <h1 className="font-semibold text-base">
+                                    {t.title}
+                                </h1>
+                                {/* <p>
+                                    {t.createdAt}
+                                </p> */}
+                            </div>
+                        </Link>
             
-                ))
-            }
+                    ))
+                }
+                </div>
             </div>
-        </>
+           
+        </main>
 
     )
 }
