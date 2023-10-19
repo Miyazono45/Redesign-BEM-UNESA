@@ -8,10 +8,14 @@ const newsSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
+    desc: {
         type: String,
         required: true
-    }
+    },
+    image: {
+        type: String
+    },
+
 }, {timestamps: true});
 
 export default mongoose.models.News || mongoose.model("News",newsSchema);

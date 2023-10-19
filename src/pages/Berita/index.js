@@ -1,7 +1,7 @@
 import Link from "next/link";
 import connect from "../../../backend/index";
 import Newsdb from "../../../models/News";
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 // import beritanew from "../../pages/components/NewsSlide"
 
 export default function Berita({Tests}){

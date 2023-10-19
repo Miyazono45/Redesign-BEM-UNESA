@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import connect from '../../../../backend/index'
 import News from '../../../../models/News'
 import Navbar from '../../components/Navbar';
+import Image from 'next/image';
 
 // export async function getServerSideProps(params){
 //     const{id} = params.query;
@@ -87,8 +88,14 @@ export default function Page({get}) {
     <>
     <Navbar/>
       <div>
+        <Image
+          src={'/'+get.image}
+          height={500}
+          width={500}
+          alt="foto Berita"
+        />
           <h1>{get?.title}</h1>
-          <p>{get?.description}</p>
+          <p>{get?.desc}</p>
       </div>
     </>
     
