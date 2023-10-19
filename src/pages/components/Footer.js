@@ -53,38 +53,38 @@ const Footer = () => {
             />
           </div>
           <div className="flex flex-row">
-            <div className="mr-[200px] mt-[160px] ml-[180px] flex flex-col z-30 ">
+            <div className="mr-[200px] mt-[160px] ml-[130px] flex flex-col z-30 ">
               <p className="font-extrabold text-[3.1em] text-[#F2F2F2]">
                 <a className="text-[#1F183C]">BEM</a> UNIVERSITAS
               </p>
               <p className=" mt-[-10px] font-extrabold text-[3.1em] text-[#F0EFF1]">
                 NEGERI <a className="text-[#1F183C]">SURABAYA</a>
               </p>
-              <div className="flex flex-row">
-                <Image src={Logo} className="w-[115px] h-[135px]" alt="" />
-                <Image src={BEM} className=" ml-5 w-[80px] h-[145px]" alt="" />
+              <div className="flex flex-row" >
+                <Image src={Logo} className="w-[105px] h-[130px] mt-2" alt="" />
+                <Image src={BEM} className=" ml-5 w-[65px] h-[150px]" alt="" />
                 <Image
                   src={Karya}
-                  className=" mt-7 ml-5 w-[180px] h-[85px]"
+                  className=" mt-10 ml-5 w-[155px] h-[60px]"
                   alt=""
                 />
               </div>
             </div>
-            <div className=" mt-[245px]  text-gray-800 flex flex-col z-40">
-              <p className="text-[#1F183C] font-extrabold text-[1.8em]">
+            <div className=" mt-[245px]  text-gray-800 flex flex-col z-40 ml-[125px]">
+              <p className="text-[#1F183C] font-extrabold text-[1.5em]">
                 Email:
               </p>
-              <p className="font-medium -mt-2 text-[1.1em]">bem@unesa.ac.id</p>
-              <p className="text-[#1F183C] font-extrabold text-[1.8em]">
+              <p className="font-medium -mt-2 text-[1.0em]">bem@unesa.ac.id</p>
+              <p className="text-[#1F183C] font-extrabold text-[1.5em]">
                 Hubungi Kami:
               </p>
-              <p className="font-medium -mt-2 text-[1.1em]">
+              <p className="font-medium -mt-2 text-[1.0em]">
                 Feby : +6281254155827
               </p>
-              <p className="text-[#1F183C] font-extrabold text-[1.8em]">
+              <p className="text-[#1F183C] font-extrabold text-[1.5em]">
                 Seketariat BEM UNESA:
               </p>
-              <p className="font-medium -mt-2 text-[1.1em]">
+              <p className="font-medium -mt-2 text-[1.0em]">
                 Jl. Unesa, Kota Surabaya
               </p>
             </div>
