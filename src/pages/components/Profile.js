@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Navbar from '../components/Navbar';
 
 import { Raleway } from 'next/font/google'
 
@@ -93,7 +94,7 @@ export default function profile() {
                 >
                     {dataRes.map((items, index) => {
                         return (
-                            < div className="w-screen bg-[#1F183C] px-[10%] fixed z-10">
+                            < div key={index} className="w-screen bg-[#1F183C] px-[10%] fixed z-10">
                                 <div className="">
                                     <h1>{dataRes[index].judul}</h1>,
                                     <p>{dataRes[index].deskripsi}</p>
