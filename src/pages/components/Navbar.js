@@ -31,9 +31,9 @@ const navbar = () => {
     return (
         <nav className={`${currentScroll >= sizeWindow - (sizeWindow * 0.75) ? 'bg-[#ffffffe6]' : 'bg - transparent'} fixed w-screen flex items-center justify-between px-5 pt-2 transition duration-200 z-10`}>
             {/* Logo Gambar */}
-            <div>
+            <Link href='/'>
                 <Image src={'/logoKarya.webp'} width={100} height={100} className='w-16 lg:w-24 lg:ml-6'></Image>
-            </div>
+            </Link>
 
             {/* Menu */}
             <button className='md:hidden' onClick={() => setIsClick(!isClick)}>
@@ -75,7 +75,7 @@ const navbar = () => {
                         <Link href={'/'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll < sizeWindow / 2 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Beranda</Link>
                     </li>
                     <li>
-                        <Link href={'#tentangKami'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll >= sizeWindow / 2 && currentScroll <= sizeWindow * 1.5 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Tentang Kami</Link>
+                        <Link href={'/components/Profile'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll >= sizeWindow / 2 && currentScroll <= sizeWindow * 1.5 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Tentang Kami</Link>
                     </li>
                     <li>
                         <Link href={'/Berita'} className={`text-[1.25em] box-border transition-all duration-200 ${currentScroll >= sizeWindow * 1.5 && currentScroll < sizeWindow * 2.5 ? 'text-yellow-400 font-extrabold text-[1.5em]' : 'text-[#1F183C]'}`}>Berita</Link>

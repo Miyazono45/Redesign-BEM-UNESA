@@ -20,7 +20,7 @@ const tentangkami = () => {
 
           {/* Hero Image */}
           <div className='w-[100%] h-full flex items-center lg:self-center lg:grow lg:basis-2/5'>
-            <Image src={'/mainUnesa.webp'} width={1000} height={1000} alt='Gambar Unesa' className='object-cover relative rounded-[6px] w-[100%] box-border md:rounded-3xl md:drop-shadow-md lg:rounded-xl lg:drop-shadow-lg lg:w-[100%] lg:h-[25em] xl:h-[40em]' />
+            <Image src={'/mainUnesa.webp'} width={500} height={500} alt='Gambar Unesa' className='object-cover relative rounded-[6px] w-[100%] box-border md:rounded-3xl md:drop-shadow-md lg:rounded-xl lg:drop-shadow-lg lg:w-[100%] lg:h-[25em] xl:h-[40em]' />
           </div>
 
           {/* Container T.Kami */}
@@ -42,7 +42,7 @@ const tentangkami = () => {
               onMouseEnter={() => bmHovered(true)}
               onMouseLeave={() => bmHovered(false)}
             >
-              <Link href={"#"} className={`${isHover ? 'text-[#4B6AFA]' : 'text-[#f8f6f6]'} font-extrabold transition-all duration-150 md:text-[1.75em] md:px-5 lg:text-[1.25em] xl:text-[1.75em] xl:font-medium`}>
+              <Link href={"/components/Profile"} className={`${isHover ? 'text-[#4B6AFA]' : 'text-[#f8f6f6]'} font-extrabold transition-all duration-150 md:text-[1.75em] md:px-5 lg:text-[1.25em] xl:text-[1.75em] xl:font-medium`}>
                 Selengkapnya
               </Link>
             </div>
