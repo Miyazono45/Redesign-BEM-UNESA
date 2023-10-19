@@ -4,7 +4,7 @@ import Logo from "../../../public/logo-unesa.png";
 import BEM from "../../../public/logo-bem.png";
 import Karya from "../../../public/logo-footer-ruang-karya.png";
 import Twa from "../../../public/Twa1.svg";
-import Tes from "../../../public/tes.svg";
+import Tess from "../../../public/Tess.svg";
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,14 +44,14 @@ const Footer = () => {
       <div className="flex flex-row">
         <div className="bottom-0">
           <Image
-            src={Tes}
-            className="absolute mt-[84px] h-[26rem] w-[110rem] z-10 -ml-6"
+            src={Tess}
+            className="absolute mt-[84px] h-[26rem] w-[85rem] z-10 -ml-2"
             alt=""
           />
           <div className="">
             <Image
               src={Twa}
-              className="absolute z-20 w-[95rem] h-[31rem] -ml-6"
+              className="absolute z-20 w-[95rem] h-[31rem] -ml-2"
               alt=""
             />
           </div>
