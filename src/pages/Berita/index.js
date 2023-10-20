@@ -17,14 +17,16 @@ export default function Berita({Tests}){
             <div className="pt-[12.5%] flex-col flex justify-center items-center">
                 <div className="bg-cover bg-no-repeat pb-[5%]">
                     <h1 className="text-7xl font-bold ">
-                       Berita 
+                       Berita <span className="text-yellow-400">
+                                 Terbaru
+                       </span>
                     </h1>
                 </div>
                 
                 <div className="flex flex-col m-auto justify-center items-center flex-grow md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
                 {Tests?.map(t =>(
             
-                        <Link key={t._id} href={'/Berita/getBerita/'+t._id} className="m-2 flex flex-col justify-center items-center bg-yellow-400 w-72 h-44 lg:w-80 lg:h-56 rounded-xl">
+                        <Link key={t._id} href={'/Berita/getBerita/'+t._id} className="m-2 flex flex-col justify-center items-center bg-[#1F183C] w-72 h-44 lg:w-80 lg:h-56 rounded-xl">
                             <Image
                                 src={'/'+t.image}
                                 height={150}
@@ -33,7 +35,7 @@ export default function Berita({Tests}){
                                 className="rounded-xl lg:h-44 lg:w-72"   
                             />
                             <div className="">
-                                <h1 className="font-semibold text-base">
+                                <h1 className="font-semibold text-base text-white">
                                     {t.title}
                                 </h1>
                                 {/* <p>

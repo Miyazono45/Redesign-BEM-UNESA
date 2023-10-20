@@ -94,9 +94,9 @@ export default function profile() {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {dataRes.map((items, index) => {
-                        return <button key={index} className={`border-2 bg-yellow-400 border-yellow-400 flex items-center justify-center rounded-full w-[85%] h-[.75em] p-6 box-border transition-all duration-200 md:drop-shadow-md xl:w-[100%]`}
+                        return <button key={index} className={`border-2 bg-[#1F183C]  flex items-center justify-center rounded-full w-[85%] h-[.75em] p-6 box-border transition-all duration-200 md:drop-shadow-md xl:w-[100%]`}
                             onClick={() => { setIsClicked(true); setNum(index) }}>
-                            <h1 className={`text-[#1F183C] font-bold text-md box-border transition-all duration-200 md:text-lg`}>{items.judul}</h1>
+                            <h1 className={`text-[#ffffff] font-bold text-md box-border transition-all duration-200 md:text-lg`}>{items.judul}</h1>
                         </button>
                     }
                     )}
