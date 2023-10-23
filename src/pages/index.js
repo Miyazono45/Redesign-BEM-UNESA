@@ -5,6 +5,7 @@ import connect from '../../backend/index.js';
 import News from '../../models/News.js';
 import NewsSlide from '../pages/components/NewsSlide.js'
 import Profile from "./components/Profile.js";
+import Footer from './components/Footer.js';
 
 
 import { Raleway } from 'next/font/google'
@@ -21,6 +22,7 @@ export default function tentangKami({Tests}) {
       {/* <TentangKami /> */}
       <NewsSlide news={Tests}/>
       {/* <Profile /> */}
+      <Footer/>
     </main>
   )
 }

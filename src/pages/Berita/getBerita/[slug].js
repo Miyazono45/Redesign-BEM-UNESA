@@ -6,6 +6,7 @@ import Image from "next/image";
 import connect from "../../../../backend/index";
 import News from "../../../../models/News";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 import { Raleway } from "next/font/google";
 const raleway = Raleway({ subsets: ["cyrillic-ext"] });
@@ -40,17 +41,20 @@ export default function Page({ get }) {
     <>
       <Navbar />
       <div className={`${raleway.className} p-[10%] pt-15`}>
-        <h1 className="font-bold text-xl ">{get?.title}</h1>
-        <p className="text-xs mb-5">Diposting pada {get?.createdAt}</p>
+        <h1 className="font-extrabold text-4xl ">{get?.title}</h1>
+        <p className="text-xl mb-5 font-light mt-1">
+          Diposting pada {get?.createdAt}
+        </p>
         <Image
-          className="rounded-xl"
+          className="rounded-xl mt-10"
           src={`/${get.image}`}
           alt={get?.title}
           width={5760}
           height={3280}
         />
-        <p className="mt-5">{get?.desc}</p>
+        <p className="mt-5 font-light text-2xl">{`${get?.desc}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque.`}</p>
       </div>
+      <Footer />
     </>
   );
 }

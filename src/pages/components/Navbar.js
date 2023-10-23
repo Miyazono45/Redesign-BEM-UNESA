@@ -57,13 +57,13 @@ const navbar = () => {
             <div className={`${isClick ? 'block' : 'hidden'} flex justify-center items-center absolute z-10 bg-[#ffffffe6] w-[50%] h-[27.5vh] top-[.5rem] right-0 mr-4 rounded-xl drop-shadow-lg transition-all duration-200`}>
                 <ul className='flex flex-col items-center gap-6'>
                     <li>
-                        <Link href={'#'} className={`transition-all duration-200 font-medium text-[1em] ${currentScroll < sizeWindow / 2 ? 'text-yellow-400 font-extrabold text-[1.6em]' : 'text-[#1F183C]'}`}>Beranda</Link>
+                        <Link href={'/'} className={`transition-all duration-200 font-medium text-[1em] ${currentScroll < sizeWindow / 2 ? 'text-yellow-400 font-extrabold text-[1.6em]' : 'text-[#1F183C]'}`}>Beranda</Link>
                     </li>
                     <li>
-                        <Link href={'#tentangKami'} className={`transition-all duration-200 font-medium text-[1em] ${currentScroll >= sizeWindow / 2 && currentScroll <= sizeWindow * 1.5 ? 'text-yellow-400 font-extrabold text-[1.6em]' : 'text-[#1F183C]'}`}>Profile</Link>
+                        <Link href={'/components/Profile'} className={`transition-all duration-200 font-medium text-[1em] ${currentScroll >= sizeWindow / 2 && currentScroll <= sizeWindow * 1.5 ? 'text-yellow-400 font-extrabold text-[1.6em]' : 'text-[#1F183C]'}`}>Profile</Link>
                     </li>
                     <li>
-                        <Link href={'#'} className={`transition-all duration-200 font-medium text-[1em] ${currentScroll >= sizeWindow * 1.5 && currentScroll < sizeWindow * 2.5 ? 'text-yellow-400 font-extrabold text-[1.6em]' : 'text-[#1F183C]'}`}>Berita</Link>
+                        <Link href={'/Berita'} className={`transition-all duration-200 font-medium text-[1em] ${currentScroll >= sizeWindow * 1.5 && currentScroll < sizeWindow * 2.5 ? 'text-yellow-400 font-extrabold text-[1.6em]' : 'text-[#1F183C]'}`}>Berita</Link>
                     </li>
                 </ul>
             </div>
