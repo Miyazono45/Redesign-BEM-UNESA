@@ -3,8 +3,8 @@ import React, { useRef, useEffect, useState } from "react";
 import Logo from "../../../public/logo-unesa.png";
 import BEM from "../../../public/logo-bem.png";
 import Karya from "../../../public/logo-footer-ruang-karya.png";
-import Twa from "../../../public/Twa1.svg";
-import Tess from "../../../public/Tess.svg";
+// import Twa from "../../../public/Twa1.svg";
+// import Tess from "../../../public/Tess.svg";
 
 import { Raleway } from "next/font/google";
 const raleway = Raleway({ subsets: ["cyrillic-ext"] });
