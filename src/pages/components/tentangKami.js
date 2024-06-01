@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 import { useState } from "react";
 
-const tentangkami = () => {
+const Tentangkami = () => {
   // Button More JS
   const [isHover, setisHover] = useState(false);
   const bmHovered = (apkh) => {
@@ -79,4 +79,4 @@ const tentangkami = () => {
   );
 };
 
-export default tentangkami;
+export default Tentangkami;

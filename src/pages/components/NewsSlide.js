@@ -12,7 +12,7 @@ import "node_modules/react-responsive-carousel/lib/styles/carousel.min.css";
 import { Raleway } from "next/font/google";
 const raleway = Raleway({ subsets: ["cyrillic-ext"] });
 
-// import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 // import Slider from 'react-slick';
 
 // const  topics  = await getTopic();

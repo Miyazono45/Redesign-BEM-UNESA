@@ -5,8 +5,7 @@ import Navbar from "./Navbar.js";
 import { Raleway } from 'next/font/google'
 
 const raleway = Raleway({ subsets: ['cyrillic-ext'] })
-
-export default function profile() {
+export default function Profile() {
     // Container Data
     const [dataRes, setDataRes] = useState([])
 
