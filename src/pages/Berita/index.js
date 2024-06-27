@@ -56,9 +56,9 @@ export default function Berita({Tests}){
 
 export const getStaticProps = async()=>{
     try{
-        console.log("connecting");
+        // console.log("connecting");
         await connect();
-        console.log("connected DB");
+        // console.log("connected DB");
   
         console.log("fetching Document");
         const Tests = await Newsdb.find();

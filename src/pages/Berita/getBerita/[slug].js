@@ -14,9 +14,9 @@ const raleway = Raleway({ subsets: ["cyrillic-ext"] });
 export const getServerSideProps = async (context) => {
   const id = context.query.slug;
   try {
-    console.log("connecting");
+    // console.log("connecting");
     await connect();
-    console.log("connected DB");
+    // console.log("connected DB");
 
     console.log("fetching Document");
     const get = await News.findById(id);
